@@ -9,3 +9,7 @@
 [submodule "Pure"]
 	path = zsh/themes/pure
 	url = https://github.com/dieisabel/pure
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
