@@ -1,0 +1,5 @@
+# Dotbot directives for configuring shell (ZSH)
+
+- shell:
+    - command: bash zsh/install
+      description: Creating zsh entrypoint

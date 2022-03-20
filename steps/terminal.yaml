@@ -1,0 +1,9 @@
+# Dotbot directives for configuring terminal (Alacritty)
+
+- create:
+    - ~/.config/alacritty/
+
+- link:
+    ~/.config/alacritty/:
+      glob: true
+      path: alacritty/*

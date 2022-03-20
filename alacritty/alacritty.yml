@@ -1,0 +1,8 @@
+# Alacritty configuration file
+# https://github.com/alacritty/alacritty
+
+import:
+  - ~/.config/alacritty/options.yaml
+  - ~/.config/alacritty/fonts.yaml
+  - ~/.config/alacritty/theme.yaml
+  - ~/.config/alacritty/mouse.yaml

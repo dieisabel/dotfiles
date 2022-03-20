@@ -1,0 +1,15 @@
+# Some additional settings for Alacritty
+
+window:
+
+  # Fullscreen terminal window at startup
+  startup_mode: Fullscreen
+
+  # Hide title bar and borders
+  decorations: none
+
+# Allows changing configuration without restarting
+live_config_reload: true
+
+shell:
+  program: /usr/bin/zsh

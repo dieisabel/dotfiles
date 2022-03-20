@@ -1,0 +1,10 @@
+# Mouse configuration for Alacritty
+
+mouse:
+
+  # Threshold tells Alacritty to wait for accepting multiply clicks as double or triple click
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+
+  # Hide cursor while typing
+  hide_when_typing: true

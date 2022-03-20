@@ -1,0 +1,11 @@
+[
+    // Switch tabs with <Ctrl> + Tab and <Ctrl> + <Shift> + Tab
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+]

@@ -1,0 +1,140 @@
+" Vim configuration file
+" I use Vim in IDE's and in a terminal, so I put everything into one Vim configuration
+" file
+
+"Make Vim respect XDG specification
+
+" Check if XDG environment variables are set otherwise set them
+if empty("XDG_DATA_HOME")
+  let $XDG_DATA_HOME="$HOME/.local/share"
+endif
+
+if empty("XDG_CONFIG_HOME")
+  let $XDG_CONFIG_HOME="$HOME/.config"
+endif
+
+if empty("XDG_CACHE_HOME")
+  let $XDG_CACHE_HOME="$HOME/.cache"
+endif
+
+" Create directory for plugins if doesn't exists
+if !isdirectory(expand("$XDG_DATA_HOME/vim/plugged//"))
+  call mkdir (expand("$XDG_DATA_HOME/vim/plugged//"), "p")
+endif
+
+" Create and set directory for runtime if doesn't exists
+if !isdirectory(expand("$XDG_CONFIG_HOME/vim/vimfiles//"))
+  call mkdir (expand("$XDG_CONFIG_HOME/vim/vimfiles//"), "p")
+endif
+set runtimepath+=$XDG_CONFIG_HOME/vim/vimfiles
+
+" Set directory for swap files
+let &directory = expand("$XDG_CACHE_HOME/vim/swaps//")
+if !isdirectory(&directory) | call mkdir (&directory, "p") | endif
+
+" Enable undofiles feature and set directory for it
+set undofile
+let &undodir = expand("$XDG_CACHE_HOME/vim/undos//")
+if !isdirectory(&undodir) | call mkdir (&undodir, "p") | endif
+
+" Set directory for viminfo file
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+
+" Enable backup feature and set directory for it
+set backup
+let &backupdir = expand("$XDG_CACHE_HOME/vim/backups//")
+if !isdirectory(&backupdir) | call mkdir (&backupdir, "p") | endif
+
+" Set home directory for netrw plugin
+let g:netrw_home = expand("$XDG_CACHE_HOME/vim//")
+if !isdirectory(g:netrw_home) | call mkdir (g:netrw_home, "p") | endif
+
+" Vim plugins
+
+" Enable filetype plugin
+filetype plugin on
+
+" For plugin management I use vim-plug
+" https://github.com/junegunn/vim-plug
+call plug#begin("$XDG_DATA_HOME/vim/plugged")
+
+" Ayu theme
+" https://github.com/ayu-theme/ayu-vim
+Plug 'ayu-theme/ayu-vim'
+
+" Airline - statusbar
+" https://github.com/vim-airline/vim-airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
+
+" Plugins settings
+
+" Set Ayu Dark color scheme
+let ayucolor = "dark"
+colorscheme ayu
+
+" Set airline theme
+let g:airline_theme = "ayu"
+
+" Display column number on section z
+let g:airline_section_z = '%c'
+
+" Force airline to use only plain ascii symbols
+let g:airline_symbols_ascii = 1
+
+" Enable true colors
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+" Create folds using {{{ }}} makers
+set foldmethod=marker
+set foldmarker={{{,}}}
+
+" Disable compability with vi, allows to use extended features of vim
+set nocompatible
+
+" Show line numbers
+set number
+
+" Highlight line where cursor is located
+set cursorline
+
+" Highlight all search pattern matches
+set hlsearch
+
+" Enable incremental search
+set incsearch
+
+" Ignore word case while searching
+set ignorecase
+
+" Enable command menu
+set wildmenu
+
+" Redraw only when we need to
+set lazyredraw
+
+" Vim will show confirmation menu if you try to quit from modified file without save
+set confirm
+
+" Vim mappings
+
+" Exit from insert mode using jj
+inoremap jj <esc>
+
+" Open folding with fa (fold appear)
+nnoremap fa za
+
+" Hit ESC twice to clear search highlighting
+nnoremap <silent> <esc> :noh<cr><esc>
+
+" Turn off recording feature
+map q <Nop>
+
+" Stop Vim for changes into replace mode at startup
+nnoremap <esc>^[ <esc>^[

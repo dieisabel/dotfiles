@@ -1,0 +1,9 @@
+# Dotbot directives for additional configuration files
+
+- create:
+    - ~/.config/python/
+
+- link:
+    # Tmux doesnt support XDG specification
+    ~/.tmux.conf: config/tmux.conf
+    ~/.config/python/pythonrc: config/pythonrc

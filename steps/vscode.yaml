@@ -1,0 +1,16 @@
+# Dotbot directives for configuring VS Code (VS Codium)
+
+- defaults:
+    link:
+      # Remove old target and create a new link
+      force: true
+
+- link:
+    ~/.config/VSCodium/User/settings.json: vscode/settings.json
+    ~/.config/VSCodium/User/keybindings.json: vscode/keybindings.json
+
+- shell:
+    - command: bash vscode/install
+      description: Installing vscode extensions
+      stdout: true
+      stderr: true
