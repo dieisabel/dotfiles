@@ -2,6 +2,10 @@
 " I use Vim in IDE's and in a terminal, so I put everything into one Vim configuration
 " file
 
+" Disable compability with vi, allows to use extended features of vim
+" Must be at the top, see https://stackoverflow.com/a/39767149
+set nocompatible
+
 "Make Vim respect XDG specification
 
 " Check if XDG environment variables are set otherwise set them
@@ -15,11 +19,6 @@ endif
 
 if empty("XDG_CACHE_HOME")
   let $XDG_CACHE_HOME="$HOME/.cache"
-endif
-
-" Create directory for plugins if doesn't exists
-if !isdirectory(expand("$XDG_DATA_HOME/vim/plugged//"))
-  call mkdir (expand("$XDG_DATA_HOME/vim/plugged//"), "p")
 endif
 
 " Create and set directory for runtime if doesn't exists
@@ -37,9 +36,6 @@ set undofile
 let &undodir = expand("$XDG_CACHE_HOME/vim/undos//")
 if !isdirectory(&undodir) | call mkdir (&undodir, "p") | endif
 
-" Set directory for viminfo file
-set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
-
 " Enable backup feature and set directory for it
 set backup
 let &backupdir = expand("$XDG_CACHE_HOME/vim/backups//")
@@ -49,13 +45,36 @@ if !isdirectory(&backupdir) | call mkdir (&backupdir, "p") | endif
 let g:netrw_home = expand("$XDG_CACHE_HOME/vim//")
 if !isdirectory(g:netrw_home) | call mkdir (g:netrw_home, "p") | endif
 
+" Set directory for viminfo file
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+
+" Enable true colors
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 " Vim plugins
 
-" Enable filetype plugin
+" Enable pre-installed filetype plugin
 filetype plugin on
 
 " For plugin management I use vim-plug
 " https://github.com/junegunn/vim-plug
+
+" Create directory for plugins if doesn't exists
+if !isdirectory(expand("$XDG_DATA_HOME/vim/plugged//"))
+  call mkdir (expand("$XDG_DATA_HOME/vim/plugged//"), "p")
+endif
+
+" Install vim-plug if doesn't exists
+if empty(glob("$XDG_CONFIG_HOME/vim/vimfiles/autoload/plug.vim"))
+  silent !curl -fLo ~/.config/vim/vimfiles/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync
+endif
+
 call plug#begin("$XDG_DATA_HOME/vim/plugged")
 
 " Ayu theme
@@ -84,19 +103,9 @@ let g:airline_section_z = '%c'
 " Force airline to use only plain ascii symbols
 let g:airline_symbols_ascii = 1
 
-" Enable true colors
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
 " Create folds using {{{ }}} makers
 set foldmethod=marker
 set foldmarker={{{,}}}
-
-" Disable compability with vi, allows to use extended features of vim
-set nocompatible
 
 " Show line numbers
 set number

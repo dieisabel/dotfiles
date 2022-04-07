@@ -7,10 +7,3 @@
     ~/.config/vim/:
       glob: true
       path: vim/*
-      exclude: [ install ]
-
-- shell:
-    - command: bash vim/install
-      description: Installing plugins
-      stdout: true
-      stderr: true
