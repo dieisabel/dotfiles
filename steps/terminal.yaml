@@ -4,6 +4,4 @@
     - ~/.config/alacritty/
 
 - link:
-    ~/.config/alacritty/:
-      glob: true
-      path: alacritty/*
+    ~/.config/alacritty/alacritty.yml: config/alacritty.yml
