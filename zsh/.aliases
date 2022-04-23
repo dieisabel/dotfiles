@@ -1,6 +1,3 @@
-# System
-alias ls="ls --color=auto"
-
 # Docker & docker-compose
 alias dc="docker-compose"
 
@@ -11,3 +8,6 @@ alias ga="git add"
 alias gs="git status"
 alias gp="git push"
 alias gs="git status"
+
+# Exa (ls alternative)
+alias ls="exa --icons --classify"

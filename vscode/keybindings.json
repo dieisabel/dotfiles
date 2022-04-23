@@ -8,4 +8,12 @@
         "key": "ctrl+shift+tab",
         "command": "workbench.action.previousEditor"
     },
+
+    // Remove keybinding to execute a bit of Python code in the terminal
+    // It pisses me off all the time
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
 ]
