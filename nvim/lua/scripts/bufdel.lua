@@ -1,10 +1,10 @@
--- Script that imporves the deletion of buffers
+-- Script that improves the deletion of buffers
 -- See https://github.com/ojroques/nvim-bufdel
+
+local M = {}
 
 local fn = vim.fn
 local cmd = vim.cmd
-
-local M = {}
 
 function M.delete_buffer()
   local buflisted = fn.getbufinfo({buflisted = 1})

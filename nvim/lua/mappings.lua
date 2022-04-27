@@ -10,5 +10,9 @@ mapkey("", "q", "<Nop>")
 -- Enter normal mode using jj
 mapkey("i", "jj", "<Esc>")
 
--- Hit <Esc> twice to clear search highlighting
+-- Hit <Esc> to clear search highlighting
 mapkey("n", "<Esc>", ":noh<CR><Esc>", { silent = true })
+
+-- Switch between editor and file explorer using <Alt + l> and <Alt + h>
+mapkey("n", "<A-l>", ":wincmd l<CR>", { silent = true })
+mapkey("n", "<A-h>", ":wincmd h<CR>", { silent = true })

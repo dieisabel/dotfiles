@@ -5,12 +5,14 @@ set.number = true
 set.mouse = "a"
 set.cursorline = true
 set.confirm = true
-set.showmode = false
 set.wildmenu = true
 set.swapfile = false
 set.backup = false
 set.undofile = false
-set.laststatus = 0
+set.list = true
+set.listchars = {
+  trail = "-",
+}
 
 -- Indentation
 
