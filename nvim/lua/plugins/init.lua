@@ -29,6 +29,15 @@ local packer = require("packer").startup(function(use)
   -- Snippet engine
   use "L3MON4D3/LuaSnip"
 
+  -- Finder
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "BurntSushi/ripgrep",
+    },
+  }
+
   -- Completion
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"
@@ -47,5 +56,6 @@ require("plugins.auto-session")
 require("plugins.lsp")
 require("plugins.nvim-cmp")
 require("plugins.statusline")
+require("plugins.telescope")
 
 return packer

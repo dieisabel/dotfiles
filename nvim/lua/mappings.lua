@@ -13,6 +13,8 @@ mapkey("i", "jj", "<Esc>")
 -- Hit <Esc> to clear search highlighting
 mapkey("n", "<Esc>", ":noh<CR><Esc>", { silent = true })
 
--- Switch between editor and file explorer using <Alt + l> and <Alt + h>
+-- Switch between windows using <Alt + Vim keys>
 mapkey("n", "<A-l>", ":wincmd l<CR>", { silent = true })
 mapkey("n", "<A-h>", ":wincmd h<CR>", { silent = true })
+mapkey("n", "<A-k>", ":wincmd k<CR>", { silent = true })
+mapkey("n", "<A-j>", ":wincmd j<CR>", { silent = true })
