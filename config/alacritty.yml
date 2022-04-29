@@ -1,48 +1,34 @@
 window:
-
-  # Startup Mode (changes require restart)
-  #
-  # Values for `startup_mode`:
-  #   - Windowed
-  #   - Maximized
-  #   - Fullscreen
   startup_mode: Maximized
-
-  # Window decorations
-  # Values for `decorations`:
-  #     - full: Borders and title bar
-  #     - none: Neither borders nor title bar
   decorations: none
 
-# Allow change configuration without restarting
 live_config_reload: true
 
 shell:
   program: /usr/bin/zsh
 
+scrolling:
+  history: 100
+
 font:
+  size: 7
 
-  size: 8
+  normal:
+    family: RobotoMono Nerd Font Mono
+    style: Light
 
-  # Offset is an extra space around each character. offset.y can be thought of
-  # modifying the linespacing, and offset.x as modifying the letter spacing
   offset:
     x: 0
     y: 0
 
-  # Glyph offset determines the locations of the glyphs within their cells with
-  # the default being at the bottom. Increase the x offset to move the glyph to
-  # the right, increase the y offset to move the glyph upward
   glyph_offset:
     x: 0
     y: 0
 
-  # Better font rendering. Works only for Mac's
   use_thin_strokes: false
 
 mouse:
 
-  # Threshold tells Alacritty to wait for accepting multiply clicks as double or triple click
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
 
@@ -78,12 +64,5 @@ colors:
 custom_cursor_colors: true
 
 cursor:
-
-  # Set cursor style
-  #   - ▇ Block
-  #   - _ Underline
-  #   - | Beam
   style: Block
-
-  # When the window is not focused cursor will be rendered as hollow box
   unfocused_hollow: true
