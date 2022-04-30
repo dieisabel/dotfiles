@@ -29,4 +29,9 @@ nvim_tree.setup({
     show_on_dirs = true,
     icons = icons.diagnostics,
   },
+  renderer = {
+    indent_markers = {
+      enable = true,
+    },
+  },
 })

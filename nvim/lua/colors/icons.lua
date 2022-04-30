@@ -1,8 +1,8 @@
 local M = {
   bufferline = {
-    indicator = "|",
-    close = "X",
-    modified = "M",
+    indicator = "▎",
+    close = "",
+    modified = "●",
     left_trunc_marker = "<",
     right_trunc_marker = ">",
   },
@@ -11,26 +11,26 @@ local M = {
     default = "",
     symlink = "*",
     git = {
-      unstaged = "M",
-      staged = "A",
+      unstaged = "✗",
+      staged = "✓",
       untracked = "*",
-      renamed = "R",
-      deleted = "D",
-      ignored = "#"
+      renamed = "➜",
+      deleted = "",
+      ignored = "◌"
     },
     folder = {
-      arrow_open = "/",
+      arrow_open = "",
       arrow_closed = ">",
-      default = "",
-      open = "",
-      empty = "#",
-      empty_open = "#",
+      default = "",
+      open = "",
+      empty = "",
+      empty_open = "",
     },
     diagnostics = {
-      hint = "H",
-      info = "I",
-      warning = "W",
-      error = "E",
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
     },
   },
 }

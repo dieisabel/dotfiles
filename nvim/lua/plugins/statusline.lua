@@ -52,7 +52,7 @@ local function update_mode_colors()
   elseif current_mode == "c" then
       mode_color = "%#GitGutterDelete#"
   elseif current_mode == "t" then
-      mode_color = "%#StatuslineTerminalAccent#"
+      mode_color = "%#Directory#"
   end
   return mode_color
 end

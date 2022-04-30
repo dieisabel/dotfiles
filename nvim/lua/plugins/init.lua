@@ -5,6 +5,9 @@ local packer = require("packer").startup(function(use)
   -- Colorschema
   use "ayu-theme/ayu-vim"
 
+  -- Icons
+  use "kyazdani42/nvim-web-devicons"
+
   -- Bufferline
   use "akinsho/bufferline.nvim"
 
@@ -19,7 +22,7 @@ local packer = require("packer").startup(function(use)
 
   -- Tool to comment/uncomment lines
   use "terrortylor/nvim-comment"
-  
+
   -- Common configurations for neovim lsp client
   use "neovim/nvim-lspconfig"
 
@@ -44,6 +47,14 @@ local packer = require("packer").startup(function(use)
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
 
+  -- Toggle terminal
+  use "akinsho/toggleterm.nvim"
+
+  -- Debugging
+  use "mfussenegger/nvim-dap"
+  use "mfussenegger/nvim-dap-python"
+  use "rcarriga/nvim-dap-ui"
+
 end)
 
 require("plugins.bufferline")
@@ -57,5 +68,7 @@ require("plugins.lsp")
 require("plugins.nvim-cmp")
 require("plugins.statusline")
 require("plugins.telescope")
+require("plugins.toggleterm")
+require("plugins.nvim-dap")
 
 return packer

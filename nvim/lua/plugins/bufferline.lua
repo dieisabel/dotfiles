@@ -6,7 +6,6 @@ local bufdel = require("scripts.bufdel").delete_buffer
 bufferline.setup({
   options = {
     always_show_bufferline = true,
-    separator_style = { "|", "|" },
     close_command = bufdel,
     tab_size = 20,
 
