@@ -1,9 +1,0 @@
-# Dotbot directives for configuring Vim
-
-- create:
-    - ~/.config/vim/
-
-- link:
-    ~/.config/vim/:
-      glob: true
-      path: vim/*

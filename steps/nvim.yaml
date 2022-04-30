@@ -1,0 +1,9 @@
+# Dotbot directives for configuring Neovim
+
+- create:
+    - ~/.config/nvim/
+
+- link:
+    ~/.config/nvim/:
+      glob: true
+      path: nvim/*
