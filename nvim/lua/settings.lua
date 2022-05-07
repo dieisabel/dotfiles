@@ -13,10 +13,14 @@ set.list = true
 set.listchars = {
   trail = "-",
 }
+set.textwidth = 88
 
 -- Indentation
 
 set.smartindent = true
+set.expandtab= true
+set.shiftwidth = 4
+set.softtabstop = 4
 
 -- Search
 

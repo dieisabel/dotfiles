@@ -1,8 +1,8 @@
-local utils = {}
+local M = {}
 
-function utils.ensure_packer_is_installed()
+function M.ensure_packer_is_installed()
   local fn = vim.fn
-  local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
+  local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
   if fn.empty(fn.glob(install_path)) > 0 then
     return fn.system({
       "git",
@@ -15,7 +15,7 @@ function utils.ensure_packer_is_installed()
   end
 end
 
-function utils.mapkey(mode, lhs, rhs, opts)
+function M.mapkey(mode, lhs, rhs, opts)
   local options = { noremap = true }
   if opts then
     options = vim.tbl_extend("force", options, opts)
@@ -23,4 +23,4 @@ function utils.mapkey(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, options)
 end
 
-return utils
+return M

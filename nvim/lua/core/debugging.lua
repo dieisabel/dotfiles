@@ -1,7 +1,10 @@
 local mapkey = require("utils").mapkey
 
+-- Mark a breakpoint by <Ctrl + b>
 mapkey("n", "<C-b>", ":lua require('dap').toggle_breakpoint()<CR>", { silent = true })
-mapkey("n", "<C-d>", ":lua require('dap').continue()<CR>", { silent = true })
+
+-- Start debugging using <Ctrl + Shift + D>
+mapkey("n", "<C-S-d>", ":lua require('dap').continue()<CR>", { silent = true })
 
 require("dap-python").setup("~/applications/debugpy/venv/bin/python")
 
