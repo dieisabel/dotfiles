@@ -69,28 +69,12 @@ local packer = require("packer").startup(function(use)
   }
 
   use {
-    "neovim/nvim-lspconfig",
-    as = "lspconfig",
+    "rmagatti/auto-session",
+    as = "sessions",
     config = function()
-      require("core.lsp")
-    end,
-  }
-
-    use {
-      "rmagatti/auto-session",
-      as = "sessions",
-      config = function()
-        require("auto-session").setup(
-          require("core.sessions").configuration
-        )
-      end,
-    }
-
-  use {
-    "L3MON4D3/LuaSnip",
-    as = "snippets",
-    config = function()
-      require("core.snippets")
+      require("auto-session").setup(
+        require("core.sessions").configuration
+      )
     end,
   }
 
@@ -108,36 +92,6 @@ local packer = require("packer").startup(function(use)
   }
 
   use {
-    "hrsh7th/cmp-nvim-lsp",
-    as = "completion-lsp",
-  }
-
-  use {
-    "hrsh7th/cmp-buffer",
-    as = "completion-tab",
-  }
-
-  use {
-    "hrsh7th/cmp-path",
-    as = "completion-path",
-  }
-
-  use {
-    "saadparwaiz1/cmp_luasnip",
-    as = "completion-snippets",
-  }
-
-  use {
-    "hrsh7th/nvim-cmp",
-    as = "completion",
-    config = function()
-      require("cmp").setup(
-        require("core.completion").configuration
-      )
-    end,
-  }
-
-  use {
     "akinsho/toggleterm.nvim",
     as = "terminal",
     config = function()
@@ -145,33 +99,6 @@ local packer = require("packer").startup(function(use)
         require("core.terminal").configuration
       )
     end,
-  }
-
-  use {
-    "mfussenegger/nvim-dap-python",
-    as = "debugging-python",
-  }
-
-  use {
-    "rcarriga/nvim-dap-ui",
-    as = "debugging-ui",
-  }
-
-  use {
-    "mfussenegger/nvim-dap",
-    as = "debugging",
-    config = function()
-      require("core.debugging")
-    end,
-  }
-
-  use {
-    "ellisonleao/glow.nvim",
-    as = "markdown-preview",
-    config = function()
-      require("core.markdown")
-    end,
-    branch = "main",
   }
 
   use {
