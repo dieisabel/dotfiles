@@ -5,9 +5,12 @@
       # Remove old target and create a new link
       force: true
 
+- create:
+    - ~/.config/Code/User/
+
 - link:
-    ~/.config/VSCodium/User/settings.json: vscode/settings.json
-    ~/.config/VSCodium/User/keybindings.json: vscode/keybindings.json
+    ~/.config/Code/User/settings.json: vscode/settings.json
+    ~/.config/Code/User/keybindings.json: vscode/keybindings.json
 
 - shell:
     - command: bash vscode/install

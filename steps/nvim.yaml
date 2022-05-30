@@ -1,5 +1,10 @@
 # Dotbot directives for configuring Neovim
 
+- defaults:
+    link:
+      # Remove old target and create a new link
+      force: true
+
 - create:
     - ~/.config/nvim/
 

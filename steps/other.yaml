@@ -1,0 +1,10 @@
+# Dotbot directives for additional configuration files
+
+- defaults:
+    link:
+      # Remove old target and create a new link
+      force: true
+
+- link:
+    # Tmux doesnt support XDG specification
+    ~/.tmux.conf: tmux.conf

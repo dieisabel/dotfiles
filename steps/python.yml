@@ -1,0 +1,12 @@
+# Dotbot directives for configuration python and its tools
+
+- defaults:
+    link:
+      # Remove old target and create a new link
+      force: true
+
+- create:
+    - ~/.config/python/
+
+- link:
+    ~/.config/python/pythonrc: python/pythonrc

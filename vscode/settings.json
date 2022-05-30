@@ -1,69 +1,81 @@
 {
   // Telemetry
   "telemetry.telemetryLevel": "off",
+
   // Editor
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 10,
-  "editor.fontFamily": "Roboto Mono",
+  "editor.fontFamily": "RobotoMono Nerd Font Mono",
   "editor.minimap.enabled": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.smoothScrolling": true,
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "editor.snippetSuggestions": "none",
+  "workbench.sideBar.location": "right",
   "editor.suggest.showWords": false,
+
   // Theme
   "workbench.productIconTheme": "fluent-icons",
   "workbench.colorTheme": "Ayu Dark",
   "workbench.iconTheme": "ayu",
-  // Workbench
-  "workbench.sideBar.location": "right",
   "breadcrumbs.enabled": true,
   "window.zoomLevel": 1,
+
   // Terminal
   "terminal.external.linuxExec": "alacritty",
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.enablePersistentSessions": true,
+
   // Files
   "files.exclude": {
-    "**/.git": false,
+    "**/.git": true,
+
     // Python cache files
     "*.pyc": true,
     "**/__pycache__/": true,
     "**/.pytest_cache/": true,
     "**/.mypy_cache": true,
+
+    // Python virtual environment
+    "**/.venv": true,
+    "**/venv": true,
+
+    // Node files
+    "**/node_modules": true,
   },
   "explorer.compactFolders": false,
+
   // Extensions
   "extensions.ignoreRecommendations": true,
   "extensions.autoCheckUpdates": true,
   "extensions.autoUpdate": false,
+
   // Gitlens
   "gitlens.currentLine.enabled": false,
   "gitlens.statusBar.enabled": false,
   "gitlens.hovers.enabled": false,
   "gitlens.codeLens.enabled": false,
-  "gitlens.views.branches.showBranchComparison": false,
   "gitlens.advanced.messages": {
     "suppressCreatePullRequestPrompt": true
   },
+
   // Project Manager
   "projectManager.showProjectNameInStatusBar": false,
   "projectManager.git.baseFolders": [
     "~/projects/",
   ],
+
   // Vim
   "vim.vimrc.enable": true,
-  "vim.vimrc.path": "~/.config/vim/vimrc",
+  "vim.vimrc.path": "~/.config/nvim/init.vim",
   "vim.handleKeys": {
-    // Close tab with <Ctrl> + W
     "<C-w>": false,
   },
+
   // Python
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
   "python.terminal.activateEnvironment": false,
-  "python.languageServer": "Jedi",
+  "python.languageServer": "Pylance",
   "python.experiments.enabled": false,
+  "workbench.startupEditor": "none",
 }

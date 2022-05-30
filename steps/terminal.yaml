@@ -1,7 +1,12 @@
 # Dotbot directives for configuring terminal (Alacritty)
 
+- defaults:
+    link:
+      # Remove old target and create a new link
+      force: true
+
 - create:
     - ~/.config/alacritty/
 
 - link:
-    ~/.config/alacritty/alacritty.yml: config/alacritty.yml
+    ~/.config/alacritty/alacritty.yml: terminal/alacritty.yml

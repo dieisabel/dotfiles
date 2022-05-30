@@ -27,6 +27,7 @@ run_dotbot() {
 
 run_dotbot "steps/shell.yaml"
 run_dotbot "steps/vscode.yaml"
-run_dotbot "steps/config.yaml"
+run_dotbot "steps/other.yaml"
+run_dotbot "steps/python.yaml"
 run_dotbot "steps/terminal.yaml"
 run_dotbot "steps/nvim.yaml"

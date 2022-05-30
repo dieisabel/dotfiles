@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
+# Check if file exists
+if [[ -f $HOME/.zshenv ]]; then
+  rm $HOME/.zshenv
+fi
+
 echo "export ZDOTDIR="$HOME/dotfiles/zsh"; source \$ZDOTDIR/.zshenv" > $HOME/.zshenv
