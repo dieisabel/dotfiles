@@ -47,23 +47,19 @@ M.configuration = {
     ignore = false,
   },
   diagnostics = {
-    enable = true,
-    show_on_dirs = true,
-    icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
-    },
+    enable = false,
   },
   filters = {
+    dotfiles = false,
     custom = {
       "^__pycache__",
       "^.mypy_cache",
+      "^.pytest_cache",
       "^.venv",
       "^venv",
       "^.coverage",
       "^.git",
+      "^node_modules",
     },
   },
   renderer = {
