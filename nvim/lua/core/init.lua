@@ -3,6 +3,26 @@ local packer_bootstrap = require("utils").ensure_packer_is_installed()
 local packer = require("packer").startup(function(use)
 
   use {
+    "lewis6991/impatient.nvim",
+    as = "optimizations-startup",
+    config = function()
+      require("core.optimizations").populate_impatient()
+      require("impatient")
+    end
+  }
+
+  use {
+    "lazytanuki/nvim-mapper",
+    as = "config-keymaps",
+    config = function()
+      require("nvim-mapper").setup(
+        require("core.config").keymaps
+      )
+    end,
+    before = "telescope.nvim",
+  }
+
+  use {
     "Shatur/neovim-ayu",
     as = "theme",
   }
@@ -59,16 +79,6 @@ local packer = require("packer").startup(function(use)
   }
 
   use {
-    "terrortylor/nvim-comment",
-    as = "comments",
-    config = function()
-      require("nvim_comment").setup(
-        require("core.comments").configuration
-      )
-    end,
-  }
-
-  use {
     "rmagatti/auto-session",
     as = "sessions",
     config = function()
@@ -79,16 +89,27 @@ local packer = require("packer").startup(function(use)
   }
 
   use {
+    "terrortylor/nvim-comment",
+    as = "comments",
+    config = function()
+      require("nvim_comment").setup(
+        require("core.comments").configuration
+      )
+    end,
+  }
+
+  use {
     "nvim-telescope/telescope.nvim",
     as = "finder",
     config = function()
-      require("telescope").setup(
-        require("core.finder").configuration
-      )
+      require("core.finder")
     end,
-    requires = {
-      "BurntSushi/ripgrep",
-    },
+  }
+
+  use {
+    "LinArcX/telescope-command-palette.nvim",
+    as = "command_palette",
+    before = "telescope.nvim",
   }
 
   use {

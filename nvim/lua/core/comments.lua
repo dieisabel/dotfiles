@@ -7,8 +7,9 @@ M.configuration = {
   create_mappings = false,
 }
 
--- Comment/uncomment using <Ctrl + />
-mapkey("n", "<C-/>", ":CommentToggle<CR>", { silent = true })
-mapkey("v", "<C-/>", ":CommentToggle<CR>", { silent = true })
+mapkey("n", "<C-/>", ":CommentToggle<CR>", { silent = true },
+       "Comments", "comments.toggle.normal", "Toggle/Untoggle comments in normal mode")
+mapkey("v", "<C-/>", ":CommentToggle<CR>", { silent = true },
+       "Comments", "comments.toggle.visual", "Toggle/Untoggle comments in visual mode")
 
 return M

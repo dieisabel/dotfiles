@@ -2,6 +2,7 @@ if has("nvim")
   lua require("settings")
   lua require("core")
   lua require("colors")
+  lua require("mappings")
 endif
 
 " Mappings

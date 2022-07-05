@@ -46,7 +46,7 @@ M.configuration = {
       {
         filetype = "NvimTree",
         text = function()
-          return vim.fn.getcwd()
+          return ".."
         end,
         text_align = "left",
         highlight = "Directory"
@@ -55,11 +55,11 @@ M.configuration = {
   },
 }
 
--- Switch between buffers using <Ctrl + Tab> and <Ctrl + Shift + Tab>
-mapkey("n", "<C-Tab>", ":BufferLineCycleNext<CR>", { silent = true })
-mapkey("n", "<C-S-Tab>", ":BufferLineCyclePrev<CR>", { silent = true })
-
--- Delete buffer using <Ctrl + w>
-mapkey("n", "<C-w>", delete_buffer, { silent = true })
+mapkey("n", "<C-Tab>", ":BufferLineCycleNext<CR>", { silent = true },
+       "Tabline", "tabline.switch.next", "Switch to next buffer")
+mapkey("n", "<C-S-Tab>", ":BufferLineCyclePrev<CR>", { silent = true },
+       "Tabline", "tabline.switch.previous", "Switch to previous buffer")
+mapkey("n", "<C-w>", ":lua require('scripts.bufdel').delete_buffer()<CR>", { silent = true },
+       "Tabline", "tabline.delete", "Delete current buffer")
 
 return M
