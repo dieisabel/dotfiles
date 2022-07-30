@@ -1,11 +1,6 @@
 if has("nvim")
-  lua require("settings")
-  lua require("core")
-  lua require("colors")
-  lua require("mappings")
+  lua require("init")
 endif
-
-" Mappings
 
 " Save using <Ctrl + S>
 nnoremap <C-s> :w<CR>

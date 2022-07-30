@@ -1,7 +1,5 @@
 local M = {}
 
-local mapkey = require("utils").mapkey
-
 M.commands = {
   { "File Explorer",
     { "Toggle", ":NvimTreeToggle" },
@@ -23,9 +21,15 @@ M.commands = {
   { "Themes",
     { "Select", ":lua require('telescope.builtin').colorscheme()" },
   },
+  { "Git",
+    { "Preview hunk", ":Gitsigns preview_hunk" },
+    { "Toggle line blame", ":Gitsigns toggle_current_line_blame" },
+    { "Toggle column signs", ":Gitsigns toggle_signs" },
+    { "Toggle number highlight", ":Gitsigns toggle_numhl" },
+  },
+  { "Notifications",
+    { "History", ":Telescope notify" },
+  },
 }
-
-mapkey("n", "<C-S-p>", ":Telescope command_palette<CR>", { silent = true },
-       "Command palette", "command_palette.toggle", "Toggle command palette")
 
 return M

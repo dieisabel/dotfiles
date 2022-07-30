@@ -1,9 +1,8 @@
 local M = {}
 
-local mapkey = require("utils").mapkey
 local delete_buffer = require("scripts.bufdel").delete_buffer
 
-M.configuration = {
+M.config = {
   options = {
     mode = "buffers",
     numbers = "none",
@@ -54,12 +53,5 @@ M.configuration = {
     },
   },
 }
-
-mapkey("n", "<C-Tab>", ":BufferLineCycleNext<CR>", { silent = true },
-       "Tabline", "tabline.switch.next", "Switch to next buffer")
-mapkey("n", "<C-S-Tab>", ":BufferLineCyclePrev<CR>", { silent = true },
-       "Tabline", "tabline.switch.previous", "Switch to previous buffer")
-mapkey("n", "<C-w>", ":lua require('scripts.bufdel').delete_buffer()<CR>", { silent = true },
-       "Tabline", "tabline.delete", "Delete current buffer")
 
 return M

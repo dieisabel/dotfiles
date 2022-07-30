@@ -1,6 +1,6 @@
 local M = {}
 
-M.configuration = {
+M.config = {
   size = 20,
   open_mapping = "<C-t>",
 }

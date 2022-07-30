@@ -13,3 +13,5 @@ Neovim.
 - Command palette
 - Git integration
 - Search
+- Terminal
+- Project manager

@@ -27,7 +27,3 @@ set.softtabstop = 4
 set.hlsearch = true
 set.incsearch = true
 set.ignorecase = true
-
--- Optimizations
-
-set.lazyredraw = true

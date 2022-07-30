@@ -1,6 +1,9 @@
 local M = {}
 
-function M.pupulate_impatient()
+local set = vim.opt
+set.lazyredraw = true
+
+function M.populate_impatient()
   local fn = vim.fn
 
   local chunks_path = fn.stdpath("cache") .. "/luacache_chunks"

@@ -1,6 +1,6 @@
 local M = {}
 
-M.configuration = {
+M.config = {
   options = {
     icons_enabled = true,
     theme = "ayu",

@@ -1,15 +1,11 @@
 local M = {}
 
-local global = vim.g
-
-local mapkey = require("utils").mapkey
-
-M.configuration = {
+M.config = {
   auto_reload_on_write = true,
   disable_netrw = true,
   hijack_cursor = false,
   hijack_netrw = true,
-  open_on_setup = true,
+  open_on_setup = false,
   view = {
     hide_root_folder = true,
     width = 50,
@@ -22,7 +18,7 @@ M.configuration = {
     },
   },
   git = {
-    enable = true,
+    enable = false,
     ignore = false,
   },
   diagnostics = {
@@ -73,8 +69,5 @@ M.configuration = {
     enable = true,
   },
 }
-
-mapkey("n", "<C-S-e>", ":NvimTreeToggle<CR>", { silent = true },
-       "File Explorer", "file_explorer.toggle", "Toggle file explorer")
 
 return M

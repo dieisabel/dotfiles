@@ -1,6 +1,10 @@
 local M = {}
 
-M.configuration = {
+local set = vim.opt
+
+set.syntax = "on"
+
+M.config = {
   ensure_installed = {
     "bash",
     "c",
