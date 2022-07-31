@@ -10,6 +10,7 @@ M.config = {
       "NvimTree",
       "toggleterm",
       "help",
+      "Trouble",
     },
     always_divide_middle = true,
     globalstatus = false,

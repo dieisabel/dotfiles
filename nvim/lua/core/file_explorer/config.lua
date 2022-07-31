@@ -19,7 +19,7 @@ M.config = {
     ignore = false,
   },
   diagnostics = {
-    enable = false,
+    enable = true,
   },
   filters = {
     dotfiles = false,

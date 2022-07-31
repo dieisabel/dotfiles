@@ -102,6 +102,18 @@ local plugins = {
     "L3MON4D3/LuaSnip",
     as = "snippets",
   },
+  {
+    "neovim/nvim-lspconfig",
+    as = "lsp-config",
+  },
+  {
+    "hrsh7th/cmp-nvim-lsp",
+    as = "completion-lsp",
+  },
+  {
+    "folke/trouble.nvim",
+    as = "lsp-list",
+  },
 }
 
 function M.install_plugins(use)

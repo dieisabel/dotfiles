@@ -16,9 +16,7 @@ M.config = {
       require("luasnip").lsp_expand(args.body)
     end,
   },
-  sources = {
-    { name = "path" },
-  },
+  sources = require("core.intellisense.completion.sources").sources,
   mapping = require("core.intellisense.completion.mappings").mappings,
 }
 M.config = vim.tbl_deep_extend(

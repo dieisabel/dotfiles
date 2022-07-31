@@ -32,6 +32,10 @@ M.commands = {
   { "Notifications",
     { "History", ":Telescope notify" },
   },
+  { "LSP",
+    { "Show info", ":LspInfo" },
+    { "Toggle list", ":TroubleToggle" },
+  },
 }
 
 return M
