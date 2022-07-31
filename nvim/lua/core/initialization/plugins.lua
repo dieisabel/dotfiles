@@ -73,6 +73,35 @@ local plugins = {
     "nvim-lualine/lualine.nvim",
     as = "statusline",
   },
+  {
+    "gpanders/editorconfig.nvim",
+    as = "integrations-editorconfig",
+  },
+  -- {
+  --   "dstein64/nvim-scrollview",
+  --   as = "scrollbar",
+  --   config = function()
+  --     require("scrollview").setup({
+  --       excluded_filetypes = {
+  --         "NvimTree",
+  --       },
+  --       current_only = true,
+  --       character = false,
+  --     })
+  --   end,
+  -- },
+  {
+    "hrsh7th/nvim-cmp",
+    as = "completion",
+  },
+  {
+    "hrsh7th/cmp-path",
+    as = "completion-path",
+  },
+  {
+    "L3MON4D3/LuaSnip",
+    as = "snippets",
+  },
 }
 
 function M.install_plugins(use)

@@ -1,7 +1,6 @@
 local M = {}
 
 local set = vim.opt
-
 set.syntax = "on"
 
 M.config = {

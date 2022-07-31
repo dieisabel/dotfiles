@@ -30,8 +30,6 @@ M.config = {
     lualine_y = {},
     lualine_z = {},
   },
-  tabline = {},
-  extensions = {},
 }
 
 return M

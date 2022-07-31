@@ -7,9 +7,6 @@ M.config = {
   hijack_netrw = true,
   open_on_setup = false,
   view = {
-    hide_root_folder = true,
-    width = 50,
-    side = "right",
     mappings = {
       list = {
         { key = "l", action = "edit" },
@@ -37,37 +34,12 @@ M.config = {
       "^node_modules",
     },
   },
-  renderer = {
-    add_trailing = true,
-    indent_markers = {
-      enable = true,
-    },
-    icons = {
-      glyphs = {
-        default = "",
-        symlink = "*",
-        git = {
-          unstaged = "✗",
-          staged = "✓",
-          untracked = "*",
-          renamed = "➜",
-          deleted = "",
-          ignored = "◌"
-        },
-        folder = {
-          arrow_open = "",
-          arrow_closed = ">",
-          default = "",
-          open = "",
-          empty = "",
-          empty_open = "",
-        },
-      },
-    },
-  },
   update_focused_file = {
-    enable = true,
+    enable = false,
   },
 }
+M.config = vim.tbl_deep_extend(
+  "keep", M.config, require("ui.file_explorer.config").config
+)
 
 return M

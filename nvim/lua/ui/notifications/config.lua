@@ -4,7 +4,7 @@ vim.notify = require("notify")
 
 M.config = {
   render = "minimal",
-  stages = "slide",
+  staged = "slide",
   timeout = 3500,
 }
 

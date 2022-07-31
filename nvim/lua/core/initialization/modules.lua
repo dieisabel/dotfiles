@@ -4,16 +4,17 @@ local modules = {
   "optimizations",
   "file_explorer",
   "sessions",
-  "statusline",
   "tabline",
   "git",
   "terminal",
   "comments",
   "syntax_highlighting",
-  "finder",
   "command_palette",
-  "notifications",
   "config",
+  "search",
+  "indentation",
+  "finder",
+  "intellisense",
 }
 
 function M.configure_modules()

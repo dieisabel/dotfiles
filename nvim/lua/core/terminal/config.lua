@@ -1,8 +1,10 @@
 local M = {}
 
 M.config = {
-  size = 20,
   open_mapping = "<C-t>",
 }
+M.config = vim.tbl_deep_extend(
+  "keep", M.config, require("ui.terminal.config").config
+)
 
 return M
