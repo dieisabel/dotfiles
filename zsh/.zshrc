@@ -1,2 +1,3 @@
-source $ZDOTDIR/theme/init.zsh
-source $ZDOTDIR/aliases/init.zsh
+source $ZDOTDIR/plugins/init.zsh
+source $ZDOTDIR/colors.zsh
+source $ZDOTDIR/aliases.zsh
