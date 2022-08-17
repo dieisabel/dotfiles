@@ -1,5 +1,33 @@
 local M = {}
 
+local icons = {
+  Text = "",
+  Method = "",
+  Function = "",
+  Constructor = "",
+  Field = "",
+  Variable = "",
+  Class = "ﴯ",
+  Interface = "",
+  Module = "",
+  Property = "ﰠ",
+  Unit = "",
+  Value = "",
+  Enum = "",
+  Keyword = "",
+  Snippet = "",
+  Color = "",
+  File = "",
+  Reference = "",
+  Folder = "",
+  EnumMember = "",
+  Constant = "",
+  Struct = "",
+  Event = "",
+  Operator = "",
+  TypeParameter = "",
+}
+
 M.config = {
   enabled = function()
     -- Disable completion in comments
@@ -18,9 +46,12 @@ M.config = {
   },
   sources = require("core.intellisense.completion.sources").sources,
   mapping = require("core.intellisense.completion.mappings").mappings,
+  formatting = {
+    format = function(_, vim_item)
+      vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
+      return vim_item
+    end
+  },
 }
-M.config = vim.tbl_deep_extend(
-  "keep", M.config, require("ui.intellisense.completion.config").config
-)
 
 return M

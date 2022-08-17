@@ -9,6 +9,7 @@ else
 
     require("nvim-mapper").setup(config)
     require("core.config.keymaps.mappings").apply_mappings()
+    require("core.config.keymaps.commands").apply_commands()
   end
 end
 

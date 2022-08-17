@@ -9,6 +9,7 @@ else
 
     require("trouble").setup(config)
     require("core.intellisense.lsp.list.mappings").apply_mappings()
+    require("core.intellisense.lsp.list.commands").apply_commands()
   end
 end
 

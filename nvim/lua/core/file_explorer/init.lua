@@ -9,6 +9,7 @@ else
 
     require("nvim-tree").setup(config)
     require("core.file_explorer.mappings").apply_mappings()
+    require("core.file_explorer.commands").apply_commands()
   end
 end
 

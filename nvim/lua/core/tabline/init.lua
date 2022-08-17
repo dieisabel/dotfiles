@@ -9,6 +9,7 @@ else
 
     require("bufferline").setup(config)
     require("core.tabline.mappings").apply_mappings()
+    require("core.tabline.commands").apply_commands()
   end
 end
 
