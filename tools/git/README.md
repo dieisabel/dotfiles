@@ -2,13 +2,10 @@
 
 ## Installation
 
-Link `config` file to:
+Link `config` file to `$HOME/.config/git/config`:
 
 ```bash
-$ ln ./config ~/.config/git/config
-
-# Or using XDG
-$ ln ./config $XDG_CONFIG_HOME/git/config
+$ ln $HOME/dotfiles/tools/git/config $HOME/.config/git/config
 ```
 
 Create new `config.local` using `config.local.template`:
