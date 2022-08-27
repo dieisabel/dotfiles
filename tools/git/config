@@ -1,0 +1,21 @@
+[include]
+path = ~/dotfiles/tools/git/config.local
+
+[init]
+defaultBranch = main
+
+[push]
+default = current
+
+[fetch]
+prune = true
+
+[branch]
+autosetuprebase = always
+
+[alias]
+stats = "status -s ."
+goto = "checkout"
+amend = "commit --amend --no-edit"
+branches = "!$DOTFILES/tools/git/scripts/git-branches.sh"
+aliases = "config --get-regexp alias"
