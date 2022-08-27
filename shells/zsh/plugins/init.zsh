@@ -1,4 +1,4 @@
-if [ -f $ZDOTDIR/antigen.zsh ]; then
+if [ -f "$ZDOTDIR/antigen.zsh" ]; then
   source $ZDOTDIR/antigen.zsh
   echo "Antigen loaded"
 
