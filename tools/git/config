@@ -4,6 +4,9 @@ path = ~/dotfiles/tools/git/config.local
 [init]
 defaultBranch = main
 
+[core]
+excludesfile = ~/dotfiles/tools/git/ignore
+
 [push]
 default = current
 
