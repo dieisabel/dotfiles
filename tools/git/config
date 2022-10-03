@@ -16,6 +16,9 @@ prune = true
 [branch]
 autosetuprebase = always
 
+[credential]
+helper = "cache --timeout=3600"
+
 [alias]
 stats = "status -s ."
 files = "ls-files ."
