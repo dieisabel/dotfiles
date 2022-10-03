@@ -1,1 +1,1 @@
-export PATH="$APPLICATIONS_HOME/nodejs/16.15.0/bin:$PATH"
+export PATH="$APPLICATIONS_HOME/nodejs/16.17.0/bin:$PATH"

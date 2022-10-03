@@ -16,8 +16,8 @@ Create `config.local.zsh` config file for custom settings:
 $ touch ./config/config.local.zsh
 ```
 
-Install antigen:
+Install [`pure`](https://github.com/sindresorhus/pure) theme:
 
 ```bash
-$ curl -L git.io/antigen > ./antigen.zsh
+$ git clone https://github.com/sindresorhus/pure.git "$XDG_DATA_HOME/zsh/prompts/pure"
 ```
