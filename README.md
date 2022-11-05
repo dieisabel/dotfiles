@@ -6,11 +6,11 @@ Every tool/editor or something has a `README.md`, where you can find installatio
 
 ## Remarks
 
-1. I always place my dotfiles in `~/dotfiles` directory. All dotfiles uses this path as a root of dotfiles. Git for example:
+1. I always place my dotfiles in `~/dotfiles` (or `$HOME/dotfiles`) directory. All dotfiles uses this path as a root of dotfiles. Git for example:
 
     ```toml
     [core]
-    excludesfile = ~/dotfiles/tools/git/ignore
+    excludesfile = ~/dotfiles/git/ignore
     ```
 
     So make sure to change it to your location.

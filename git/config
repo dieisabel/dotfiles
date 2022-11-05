@@ -1,0 +1,34 @@
+[include]
+path = ~/dotfiles/git/config.local
+
+[init]
+defaultBranch = main
+
+[core]
+excludesfile = ~/dotfiles/git/ignore
+
+[push]
+default = current
+
+[fetch]
+prune = true
+
+[branch]
+autosetuprebase = always
+
+[credential]
+helper = "cache --timeout=3600"
+
+[alias]
+stats = "status -s ."
+ls = "ls-files ."
+cd = "checkout"
+amend = "commit --amend --no-edit"
+branches = "!$DOTFILES/git/scripts/git-branches.sh"
+aliases = "config --get-regexp alias"
+tags = "tag -n1 --list"
+stashes = "stash list"
+unstage = "reset HEAD"
+uncommit = "reset --soft HEAD~1"
+state = "!git fetch origin && git remote show origin && :"
+save = "!git add -A && git commit -m 'save point!'"
