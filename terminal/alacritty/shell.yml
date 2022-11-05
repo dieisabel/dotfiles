@@ -1,5 +1,0 @@
-shell:
-  program: /usr/bin/zsh
-
-scrolling:
-  history: 4000
