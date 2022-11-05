@@ -21,3 +21,9 @@ Install [`pure`](https://github.com/sindresorhus/pure) theme:
 ```bash
 $ git clone https://github.com/sindresorhus/pure.git "$XDG_DATA_HOME/zsh/prompts/pure"
 ```
+
+Install [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) plugin:
+
+```bash
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting "$XDG_DATA_HOME/zsh/plugins/syntax-highlighting"
+```
