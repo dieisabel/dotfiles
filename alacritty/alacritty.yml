@@ -1,0 +1,6 @@
+import:
+  - ~/.config/alacritty/ui.yml
+  - ~/.config/alacritty/input.yml
+  - ~/.config/alacritty/shell.yml
+
+live_config_reload: true
