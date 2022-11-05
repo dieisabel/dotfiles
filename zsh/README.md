@@ -6,7 +6,7 @@ Create new file `.zshenv` in your home directory:
 
 ```bash
 $ cat << EOF > $HOME/.zshenv
-export ZDOTDIR="$HOME/dotfiles/shells/zsh"; source $ZDOTDIR/.zshenv
+export ZDOTDIR="$HOME/dotfiles/zsh"; source $ZDOTDIR/.zshenv
 EOF
 ```
 
