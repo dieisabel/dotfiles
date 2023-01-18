@@ -1,4 +1,4 @@
 .zcompdump*
 *.zwc
 antigen.zsh
-config/config.local.zsh
+local.zsh
