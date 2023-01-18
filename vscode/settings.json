@@ -1,8 +1,5 @@
 {
-  // Telemetry
   "telemetry.telemetryLevel": "off",
-
-  // Editor
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 11,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
@@ -14,44 +11,27 @@
   "workbench.sideBar.location": "right",
   "editor.suggest.showWords": false,
   "editor.cursorSmoothCaretAnimation": true,
-
-  // Theme
   "workbench.productIconTheme": "fluent-icons",
   "workbench.iconTheme": "ayu",
   "workbench.colorTheme": "Ayu Dark",
   "breadcrumbs.enabled": true,
   "window.zoomLevel": 1,
-
-  // Terminal
-  // "terminal.external.linuxExec": "alacritty",
   "terminal.integrated.fontSize": 10,
   "terminal.integrated.enablePersistentSessions": true,
-
-  // Files
   "files.exclude": {
     "**/.git": true,
-
-    // Python cache files
     "*.pyc": true,
     "**/__pycache__/": true,
     "**/.pytest_cache/": true,
     "**/.mypy_cache": true,
-
-    // Python virtual environment
     "**/.venv": true,
     "**/venv": true,
-
-    // Node files
     "**/node_modules": true,
   },
   "explorer.compactFolders": false,
-
-  // Extensions
   "extensions.ignoreRecommendations": true,
   "extensions.autoCheckUpdates": true,
   "extensions.autoUpdate": false,
-
-  // Gitlens
   "gitlens.currentLine.enabled": false,
   "gitlens.statusBar.enabled": false,
   "gitlens.hovers.enabled": false,
@@ -59,26 +39,15 @@
   "gitlens.advanced.messages": {
     "suppressCreatePullRequestPrompt": true
   },
-
-  // Project Manager
   "projectManager.showProjectNameInStatusBar": false,
-  "projectManager.git.baseFolders": [
-    "~/projects/",
-  ],
-
-  // Vim
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "~/.config/nvim/init.vim",
   "vim.handleKeys": {
     "<C-w>": false,
   },
-
-  // Python
   "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
   "python.terminal.activateEnvironment": false,
   "python.languageServer": "Pylance",
   "python.experiments.enabled": false,
-
-  // Make / CMake
   "cmake.configureOnOpen": false,
 }
