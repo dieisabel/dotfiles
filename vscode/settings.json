@@ -5,7 +5,7 @@
   // Editor
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 11,
-  "editor.fontFamily": "Jetbrains Mono",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.minimap.enabled": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.smoothScrolling": true,
@@ -13,16 +13,17 @@
   "files.insertFinalNewline": true,
   "workbench.sideBar.location": "right",
   "editor.suggest.showWords": false,
+  "editor.cursorSmoothCaretAnimation": true,
 
   // Theme
   "workbench.productIconTheme": "fluent-icons",
-  "workbench.colorTheme": "Ayu Dark",
   "workbench.iconTheme": "ayu",
+  "workbench.colorTheme": "Ayu Dark",
   "breadcrumbs.enabled": true,
   "window.zoomLevel": 1,
 
   // Terminal
-  "terminal.external.linuxExec": "alacritty",
+  // "terminal.external.linuxExec": "alacritty",
   "terminal.integrated.fontSize": 10,
   "terminal.integrated.enablePersistentSessions": true,
 
@@ -73,8 +74,11 @@
   },
 
   // Python
-  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
   "python.terminal.activateEnvironment": false,
   "python.languageServer": "Pylance",
   "python.experiments.enabled": false,
+
+  // Make / CMake
+  "cmake.configureOnOpen": false,
 }
