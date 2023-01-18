@@ -10,10 +10,10 @@ export ZDOTDIR="$HOME/dotfiles/zsh"; source $ZDOTDIR/.zshenv
 EOF
 ```
 
-Create `config.local.zsh` config file for custom settings:
+Create `local.zsh` config file for custom settings:
 
 ```bash
-$ touch ./config/config.local.zsh
+$ touch ./local.zsh
 ```
 
 Install [`pure`](https://github.com/sindresorhus/pure) theme:
