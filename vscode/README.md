@@ -15,3 +15,5 @@ $ ln $HOME/dotfiles/vscode/keybindings.json $HOME/.config/Code/User/keybindings.
 ```
 
 Download and install JetBrains Mono Nerd Font on [Nerd Fonts website](https://www.nerdfonts.com/).
+
+I use Vim extension in VSCode, so dont forget to configure vim (check `dotfiles/vim`).
