@@ -13,3 +13,5 @@ Create new `config.local` using `config.local.template`:
 ```bash
 $ cat ./config.local.template > ./config.local
 ```
+
+Install [`delta`](https://github.com/dandavison/delta) for syntax-highlighting in diff.
