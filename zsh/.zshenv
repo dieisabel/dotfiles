@@ -23,6 +23,10 @@ if [ -d "$PYENV_ROOT/bin" ]; then
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
+export RBENV_ROOT="$APPLICATIONS_HOME/rbenv"
+if [ -d "$RBENV_ROOT/bin" ]; then
+  eval "$($RBENV_ROOT/bin/rbenv init - zsh)"
+fi
 export RUSTUP_HOME="$APPLICATIONS_HOME/rust/rustup"
 export CARGO_HOME="$APPLICATIONS_HOME/rust/cargo"
 if [ -f "$CARGO_HOME/env" ]; then
