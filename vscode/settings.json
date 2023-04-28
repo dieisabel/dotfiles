@@ -10,7 +10,8 @@
   "files.insertFinalNewline": true,
   "workbench.sideBar.location": "right",
   "editor.suggest.showWords": false,
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.activityBar.visible": true,
   "workbench.productIconTheme": "fluent-icons",
   "workbench.iconTheme": "ayu",
   "workbench.colorTheme": "Ayu Dark",
@@ -49,5 +50,5 @@
   "python.terminal.activateEnvironment": false,
   "python.languageServer": "Pylance",
   "python.experiments.enabled": false,
-  "cmake.configureOnOpen": false,
+  "todo-tree.highlights.enabled": false,
 }
